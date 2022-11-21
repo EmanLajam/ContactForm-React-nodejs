@@ -83,3 +83,9 @@ button:hover{
 ::selection {
   background: rgb(255, 199, 184);
 }
+.msg{
+  display: none;
+}
+.msgapear{
+  display: block;
+}

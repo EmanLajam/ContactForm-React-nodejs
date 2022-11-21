@@ -7,6 +7,7 @@ export default class Form extends Component{
     state={
         name:'',
         email:'',
+        priority:'',
         message:'',
         sent:false
     }
@@ -69,23 +70,27 @@ export default class Form extends Component{
             <div className='container'>
         <form onSubmit={this.formSubmit} action="#">
         <label for="customerName">NAME <em>&#x2a;</em> </label>  
-        <input type="text" id="customerName" name="customerName" required=""
+        <input type="text" id="customerName" name="customerName" required
         value={this.state.name}
         onChange={this.handleName}/>
         
         <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
-        <input type="email" id="customerEmail" name="customerEmail" required=""
+        <input type="email" id="customerEmail" name="customerEmail" required
         value={this.state.email}
         onChange={this.handleEmail}/>
         
         <label for="customerNote"> YOUR MESSAGE <em>&#x2a;</em> </label>
           
          
-        <textarea rows="4" id="customerNote" name="customerNote" required=""
+        <textarea rows="4" id="customerNote" name="customerNote" required
         value={this.state.message}
         onChange={this.handleMessage}/>
         <h3>Please provide all the information about your issue you can.</h3> 
-        
+        <div className={this.state.sent ? 'msg msgapear' : 'msg'}>
+             <p>Message has been sent</p>
+             </div>
+             
+          
         <button id="customerOrder"> SUBMIT</button>
        
         </form>
