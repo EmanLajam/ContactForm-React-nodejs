@@ -22,7 +22,7 @@ body{
   padding: 50px 100px;
   border-top: 10px solid #f45702;
 }
-label, input, textarea{
+label, input, textarea, select{
   display: block;
   width: 100%;
   font-size:12pt;
@@ -47,7 +47,7 @@ em{
   color: #f45702;
   font-weight: bold;
 }
-input, textarea{
+input, textarea, select{
   border: none;
   border: 1px solid rgba(0,0,0,.1);
   border-radius: 2px;
@@ -56,12 +56,17 @@ input, textarea{
   outline: none;
   padding: 10px;
 }
-input:focus, textarea:focus{
+input:focus, textarea:focus, select:focus{
   border: 1px solid #6bd4b1;
 }
 textarea{
   resize: none;
 }
+select {
+  width: 105%;
+}
+
+
 button{
   display: block;
   float: right;

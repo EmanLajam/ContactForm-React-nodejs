@@ -23,6 +23,11 @@ export default class Form extends Component{
             email:e.target.value
         })
     }
+    handlePriority = (e)=>{
+        this.setState({
+            priority:e.target.value
+        })
+    }
     handleMessage = (e)=>{
         this.setState({
             message:e.target.value
@@ -36,6 +41,7 @@ export default class Form extends Component{
         let data = {
             name:this.state.name,
             email:this.state.email,
+            priority:this.state.priority,
             message:this.state.message
         }
 
@@ -54,6 +60,7 @@ export default class Form extends Component{
             this.setState({
                 name:'',
                 email:'',
+                priority:'',
                 message:''
             })
 
@@ -78,7 +85,17 @@ export default class Form extends Component{
         <input type="email" id="customerEmail" name="customerEmail" required
         value={this.state.email}
         onChange={this.handleEmail}/>
+
+        <label for="priority">RRIORITY</label>
+        <select id="priority" name="priority" value={this.state.priority}
+        onChange={this.handlePriority}>
+        <option value="" disabled selected>PRIORITY...</option>
+        <option value="HIGH">HIGH PRIORITY</option>
+        <option value="MEDIUM">MEDIUM PRIORITY</option>
+        <option value="LOW ">LOW PRIORITY</option>
+        </select>
         
+    
         <label for="customerNote"> YOUR MESSAGE <em>&#x2a;</em> </label>
           
          

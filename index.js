@@ -31,7 +31,7 @@ app.post('/api/contact', (req, res)=>{
 let mailOptions={
     from:data.email,
     to:'nodereacttestt@gmail.com',
-    subject:`Message from ${data.name}`,
+    subject:`Message from ${data.name} ( ${data.priority} PRIORITY )`,
     html:`
     <h3>Informations</h3>
     <ul>
